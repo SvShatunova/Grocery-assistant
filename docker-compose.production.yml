@@ -26,9 +26,9 @@ services:
     volumes:
       - static:/frontend_static
   nginx:
-    image: nginx:1.19.3
+    image: svshatun/foodgram_nginx
     ports:
-      - 8000:80
+      - 7000:80
     volumes:
       - static:/staticfiles/
       - media:/media/
