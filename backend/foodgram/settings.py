@@ -1,5 +1,4 @@
 import os
-
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -128,8 +127,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ),
     'SEARCH_PARAM': 'name',
-    # 'DEFAULT_PAGINATION_CLASS': 'api.paginations.RecipePagination',
-    # 'PAGE_SIZE': 6,
 }
 
 DJOSER = {
