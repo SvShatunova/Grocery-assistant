@@ -28,7 +28,7 @@ services:
   nginx:
     image: svshatun/foodgram_nginx
     ports:
-      - 7000:80
+      - 8000:80
     volumes:
       - static:/staticfiles/
       - media:/media/

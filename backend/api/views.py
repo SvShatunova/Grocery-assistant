@@ -2,7 +2,6 @@ import io
 
 from django.shortcuts import get_object_or_404
 from django.db.models import Sum
-# from django.http import HttpResponse
 from django_filters.rest_framework import DjangoFilterBackend
 from django.http import FileResponse
 
@@ -16,7 +15,6 @@ from rest_framework.viewsets import ReadOnlyModelViewSet
 from rest_framework.permissions import (
     IsAuthenticatedOrReadOnly,
     IsAuthenticated,
-    # AllowAny,
     SAFE_METHODS
 )
 from rest_framework.filters import SearchFilter
@@ -43,7 +41,6 @@ from recipes.models import (
     Favorite,
     ShoppingCart,
     IngredientAmount
-    # RecipeIngredient
 )
 from users.models import User, Subscribe
 from .filters import IngredientFilter, RecipeFilter
@@ -61,9 +58,9 @@ class CustomUserViewSet(UserViewSet):
         return UserReadSerializer
 
     @action(
-            detail=False,
-            methods=['post'],
-            permission_classes=(IsAuthenticated,))
+        detail=False,
+        methods=['post'],
+        permission_classes=(IsAuthenticated,))
     def set_password(self, request):
         serializer = SetPasswordSerializer(request.user, data=request.data)
         if serializer.is_valid(raise_exception=True):
@@ -186,10 +183,10 @@ class RecipeViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST)
 
     @action(
-            detail=True,
-            methods=['post', 'delete'],
-            permission_classes=(IsAuthenticated,),
-            pagination_class=None)
+        detail=True,
+        methods=['post', 'delete'],
+        permission_classes=(IsAuthenticated,),
+        pagination_class=None)
     def shopping_cart(self, request, **kwargs):
         recipe = get_object_or_404(Recipe, id=kwargs['pk'])
 
