@@ -1,15 +1,9 @@
-from import_export.admin import ImportExportActionModelAdmin
 from django.contrib import admin
+from import_export.admin import ImportExportActionModelAdmin
 
-from recipes.models import (
-    Ingredient,
-    Tag,
-    Recipe,
-    Favorite,
-    ShoppingCart,
-    IngredientAmount
-)
-from users.models import User, Subscribe
+from recipes.models import (Favorite, Ingredient, IngredientAmount, Recipe,
+                            ShoppingCart, Tag)
+from users.models import Subscribe, User
 
 
 @admin.register(Ingredient)

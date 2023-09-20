@@ -1,26 +1,17 @@
 import base64
 import webcolors
 
-from django.core.files.base import ContentFile
 from django.contrib.auth.password_validation import validate_password
 from django.core import exceptions as django_exceptions
+from django.core.files.base import ContentFile
+from djoser.serializers import UserCreateSerializer, UserSerializer
 
-from djoser.serializers import (UserCreateSerializer,
-                                UserSerializer)
 from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
 
-from recipes.models import (
-    Ingredient,
-    Tag,
-    Recipe,
-    Favorite,
-    ShoppingCart,
-    IngredientAmount,
-    RecipeIngredient
-)
-
-from users.models import User, Subscribe
+from recipes.models import (Favorite, Ingredient, IngredientAmount, Recipe,
+                            RecipeIngredient, ShoppingCart, Tag)
+from users.models import Subscribe, User
 
 
 class Base64ImageField(serializers.ImageField):
