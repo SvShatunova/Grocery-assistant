@@ -143,3 +143,5 @@ DJOSER = {
     # },
     'HIDE_USERS': False,
 }
+
+CSRF_TRUSTED_ORIGINS = ["https://foodgramsv.ddns.net"]
