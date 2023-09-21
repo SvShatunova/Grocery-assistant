@@ -90,7 +90,7 @@ class SetPasswordSerializer(serializers.Serializer):
 
 
 class IngredientSerializer(serializers.ModelSerializer):
-    """Ингредиенты в рецепте."""
+    """Ингредиенты."""
 
     class Meta:
         model = Ingredient
