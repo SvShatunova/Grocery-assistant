@@ -26,20 +26,83 @@
 * django-import-export==3.2.0
 * reportlab==4.0.4
 
-#### Установка и запуск проекта
+## Инструкции по установке
 
-1.Клонирование кода приложения с GitHub:
+***- Клонируйте репозиторий:***
 
-git clone SSH-ссылка
+git clone:
 
-2.Создать и активировать виртуальное окружение:
+***- Установите и активируйте виртуальное окружение:***
+
+-для MacOS
+
+python3 -m venv venv
+
+-для Windows
 
 python -m venv venv
-source vens/Scripts/activate
+source venv/bin/activate
+source venv/Scripts/activate
 
-3.Установите зависимости из файла requirements.txt:
+***- Установите зависимости из файла requirements.txt:***
 
 pip install -r requirements.txt
+
+***- Примените миграции:***
+
+python manage.py migrate
+
+***- В папке с файлом manage.py выполните команду для запуска локально:***
+
+python manage.py runserver
+
+***- Локально Документация доступна по адресу:***
+
+-http://127.0.0.1/api/docs/
+
+### Собираем контейнерыы
+
+Из папки infra/ разверните контейнеры при помощи docker-compose:
+
+docker-compose up -d --build
+
+Выполните миграции:
+
+docker-compose exec backend python manage.py migrate
+
+Создайте суперпользователя:
+
+docker-compose exec backend python manage.py createsuperuser
+
+Соберите статику:
+
+docker-compose exec backend python manage.py collectstatic
+
+Наполните базу данных ингредиентами и тегами. Выполняйте команду из дериктории где находится файл manage.py:
+
+docker-compose exec backend python manage.py load_data
+
+Остановка проекта:
+
+docker-compose down
+
+### Подготовка к запуску проекта на удаленном сервере
+
+Cоздать и заполнить .env файл в директории infra
+
+POSTGRES_DB=foodgram
+POSTGRES_USER=foodgram_user
+POSTGRES_PASSWORD=foodgram_password
+DB_HOST=db
+DB_PORT=5432
+TOKEN=*
+ALLOWED_HOSTS=*
+
+#### Проект доступен по ссылкам
+
+-http://foodgramsv.ddns.net/
+
+-http://foodgramsv.ddns.net/admin/
 
 ##### Автор
 
