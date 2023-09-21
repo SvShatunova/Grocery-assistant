@@ -10,7 +10,7 @@ services:
     image: postgres:13.10
     env_file: .env
     volumes:
-      - fg_data:/var/lib/postgresql/fg_data
+      - fg_data:/var/lib/postgresql/data
   backend:
     image: svshatun/foodgram_backend  
     env_file: .env
@@ -35,3 +35,4 @@ services:
       - media:/media/
     depends_on:
       - backend
+      - frontend
