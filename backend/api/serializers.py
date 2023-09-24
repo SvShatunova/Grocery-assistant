@@ -1,14 +1,12 @@
 import base64
-import webcolors
 
+import webcolors
 from django.contrib.auth.password_validation import validate_password
 from django.core import exceptions as django_exceptions
 from django.core.files.base import ContentFile
 from djoser.serializers import UserCreateSerializer, UserSerializer
-
 from rest_framework import serializers
 from rest_framework.relations import SlugRelatedField
-
 from recipes.models import (Favorite, Ingredient, IngredientAmount, Recipe,
                             RecipeIngredient, ShoppingCart, Tag)
 from users.models import Subscribe, User

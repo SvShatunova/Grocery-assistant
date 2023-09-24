@@ -104,6 +104,14 @@ ALLOWED_HOSTS=*
 
 -http://foodgramsv.ddns.net/admin/
 
+-createsuperuser
+    *login = svshatun0va@yandex.ru
+    *password = qazpoikmN2707
+
+-user
+    *login = svetik_firsova@mail.ru
+    *password = qazpoikmN2707
+
 ##### Автор
 
 Светлана Шатунова

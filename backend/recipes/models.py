@@ -1,7 +1,6 @@
 from django.core import validators
 from django.core.validators import MinValueValidator
 from django.db import models
-
 from users.models import User
 
 
@@ -17,7 +16,7 @@ class Ingredient(models.Model):
     )
 
     class Meta:
-        ordering = ['name']
+        ordering = ('name',)
         verbose_name = 'Ингридиенты'
         verbose_name_plural = 'Ингридиенты'
 
@@ -46,7 +45,7 @@ class Tag(models.Model):
             message='Символы недоступны')])
 
     class Meta:
-        ordering = ['name']
+        ordering = ('name',)
         verbose_name = 'Тег'
         verbose_name_plural = 'Теги'
 
@@ -96,7 +95,7 @@ class Recipe(models.Model):
     )
 
     class Meta:
-        ordering = ['-pub_date']
+        ordering = ('-pub_date',)
         verbose_name = 'Рецепт'
         verbose_name_plural = 'Рецепты'
 
@@ -231,7 +230,7 @@ class ShoppingCart(models.Model):
     )
 
     class Meta:
-        ordering = ['id']
+        ordering = ('id',)
         verbose_name = 'Покупки'
         verbose_name_plural = 'Покупки'
 

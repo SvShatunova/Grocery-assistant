@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'import_export',
     'djoser',
+    'colorfield',
     'api.apps.ApiConfig',
     'recipes.apps.RecipesConfig',
     'users.apps.UsersConfig',
@@ -134,13 +135,9 @@ DJOSER = {
         'user': 'api.serializers.UserReadSerializer',
         'current_user': 'api.serializers.UserReadSerializer',
     },
-
-    # 'PERMISSIONS': {
-    #     'user': ['djoser.permissions.CurrentUserOrAdminOrReadOnly'],
-    #     'user_list': [
-    # 'rest_framework.permissions.IsAuthenticatedOrReadOnly'],
-    # },
     'HIDE_USERS': False,
 }
 
-CSRF_TRUSTED_ORIGINS = ["https://foodgramsv.ddns.net"]
+CSRF_TRUSTED_ORIGINS = ['https://foodgramsv.ddns.net']
+
+EMPTY_VALUE_DISPLAY = '-пусто-'
