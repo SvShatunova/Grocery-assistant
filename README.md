@@ -100,13 +100,13 @@ ALLOWED_HOSTS=*
 
 #### Проект доступен по ссылкам
 
--http://foodgramsv.ddns.net/
+-https://foodgramsv.ddns.net/
 
--http://foodgramsv.ddns.net/admin/
+-https://foodgramsv.ddns.net/admin/
 
 -createsuperuser
-    *login = svshatun0va@yandex.ru
-    *password = qazpoikmN2707
+    *login = svshatun@gmail.com
+    *password = qazpoikmN0105
 
 -user
     *login = svetik_firsova@mail.ru
