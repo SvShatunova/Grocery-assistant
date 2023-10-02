@@ -105,12 +105,12 @@ ALLOWED_HOSTS=*
 -https://foodgramsv.ddns.net/admin/
 
 -createsuperuser
-    *login = svshatun@gmail.com
-    *password = qazpoikmN0105
+    *login =
+    *password =
 
 -user
-    *login = svetik_firsova@mail.ru
-    *password = qazpoikmN2707
+    *login =
+    *password =
 
 ##### Автор
 
