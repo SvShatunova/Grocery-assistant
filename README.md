@@ -11,20 +11,20 @@
 
 ### Технологии
 
-* Django==3.2.3
-* djangorestframework==3.12.4
-* djangorestframework-simplejwt==5.2.2
-* django-filter==23.2
-* djoser==2.1.0
-* webcolors==1.11.1
-* psycopg2-binary==2.9.3
-* Pillow==9.0.0
-* PyYAML==6.0
-* python-dotenv==1.0.0
-* gunicorn==20.1.0
-* sorl-thumbnail==12.9.0
-* django-import-export==3.2.0
-* reportlab==4.0.4
+* Django
+* djangorestframework
+* djangorestframework-simplejwt
+* django-filter
+* djoser
+* webcolors
+* psycopg2-binary
+* Pillow
+* PyYAML
+* python-dotenv
+* gunicorn
+* sorl-thumbnail
+* django-import-export
+* reportlab
 
 ## Инструкции по установке
 
@@ -114,4 +114,4 @@ ALLOWED_HOSTS=*
 
 ##### Автор
 
-Светлана Шатунова
+[Светлана Шатунова](https://github.com/SvShatunova)
